@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{% block title %}Bookstore{% endblock %}</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    </head>
+
+    <style>
+        li {
+        float:left;
+        margin:2px;
+        list-style-type:none;}
+
+        .right{
+        float:right;
+        margin-right:100px;}
+
+        .mainpage{
+        <!--background-color: lightblue;-->
+        border:3px solid black;
+        height:100px;
+        width:1500px;
+         }
+        body{ background-color: silver;}
+
+        .myButton {
+	        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc105), color-stop(1, #ffc105));
+            background:-moz-linear-gradient(top, #ffc105 5%, #ffc105 100%);
+            background:-webkit-linear-gradient(top, #ffc105 5%, #ffc105 100%);
+            background:-o-linear-gradient(top, #ffc105 5%, #ffc105 100%);
+            background:-ms-linear-gradient(top, #ffc105 5%, #ffc105 100%);
+            background:linear-gradient(to bottom, #ffc105 5%, #ffc105 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc105', endColorstr='#ffc105',GradientType=0);
+            background-color:#ffc105;
+            -moz-border-radius:28px;
+            -webkit-border-radius:28px;
+            border-radius:28px;
+            border:1px solid #ffc105;
+            display:inline-block;
+            cursor:pointer;
+            color:#000000;
+            font-family:Arial;
+            font-size:17px;
+            padding:7px 8px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #ffc105;
+        }
+        .myButton:hover {
+            background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc105), color-stop(1, #ffc105));
+            background:-moz-linear-gradient(top, #ffc105 5%, #ffc105 100%);
+            background:-webkit-linear-gradient(top, #ffc105 5%, #ffc105 100%);
+            background:-o-linear-gradient(top, #ffc105 5%, #ffc105 100%);
+            background:-ms-linear-gradient(top, #ffc105 5%, #ffc105 100%);
+            background:linear-gradient(to bottom, #ffc105 5%, #ffc105 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc105', endColorstr='#ffc105',GradientType=0);
+            background-color:#ffc105;
+        }
+        .myButton:active {
+            position:relative;
+            top:1px;
+        }
+
+    </style>
+
+    <body>
+
+        <div class="mainpage">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="myButton" href=" {% url 'homepage'%}" role="button">Login</a>
+                    </li>
+                    <li>
+                        <a class="myButton" href=" {% url 'allbooks'%}" role="button">Books</a>
+                    </li>
+
+                     <li>
+                        <a class="myButton" href=" {% url 'allauthors'%}" role="button">Authors</a>
+                    </li>
+
+                    <li>
+                        <a class="myButton" href="{% url 'fiction'%}" role="button">Fiction Books</a>
+                    </li>
+
+                    <li>
+                        <a class="myButton" href=" {% url 'horror'%}" role="button">Horror Books</a>
+                    </li>
+
+                    <li>
+                        <a class="myButton" href=" {% url 'suspense'%}" role="button">Suspense Books</a>
+                    </li>
+
+                    <li>
+                        <a class="myButton" href="{% url 'addbooks'%}" role="button"> Add Books</a>
+                    </li>
+
+                    <li>
+                        <a class="myButton" href="{% url 'addauthor'%}" role="button">Add Author</a>
+                    </li>
+
+                    <li>
+                        <a class="myButton" href="{% url 'assignauthor'%}" role="button">Assign Author</a>
+                    </li>
+
+                    <li>
+                        <a class="myButton" href="{% url 'bjson'%}" role="button">Books JSON</a>
+                    </li>
+
+                    <li>
+                        <a class="myButton" href="{% url 'ajson'%}" role="button">Author JSON</a>
+                    </li>
+
+                    <li class="right">
+                        <a class="myButton" href="{% url 'logout'%}" role="button">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        {% block body %}
+        {% endblock %}
+
+    </body>
+</html>

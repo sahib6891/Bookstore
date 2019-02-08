@@ -1,0 +1,44 @@
+{% extends 'index.html'%}
+{% block title %}Books{% endblock %}
+{% block body %}
+
+    <style>
+    table
+    {
+      border-collapse: collapse;
+    }
+
+    table, th, td
+    {
+      border: 3px solid black;
+    }
+
+
+    </style>
+
+
+        <h1> This is the list of Authors:</h1>
+
+            <table class="table table-bordered table-dark">
+
+                <tr>
+                    <th>Author First Name</th>
+                    <th>Author Last Name</th>
+                    <th>User Ratings to Author's Work</th>
+                    <th>Delete Author</th>
+                </tr>
+                <tr>
+                    {% for authors in authorsdata %}
+                <tr>
+                    <th>{{authors.author_fname}}</th>
+                    <th>{{authors.author_lname}}</th>
+                    <th>{{authors.rating_user}}</th>
+                <td class="myButton"><a href = "{% url 'delauthor' authors.id %}">Delete</a></td>
+
+                </tr>
+                {% endfor %}
+
+            </table>
+
+
+{% endblock %}

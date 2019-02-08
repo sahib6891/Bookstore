@@ -1,0 +1,43 @@
+{% extends 'index.html'%}
+{% block title %}Suspense{% endblock %}
+{% block body %}
+	<style>
+		table {
+	  border-collapse: collapse;
+	}
+
+	table, th, td {
+	  border: 3px solid black;
+	}
+	</style>
+
+	<h1>Suspense Book Names:</h1>
+	<table class="table table-bordered table-dark">
+		<tr>
+			<th>Book Title</th>
+			<th>Book Category</th>
+			<th>Publisher</th>
+			<th>Language</th>
+			<th>Published Year</th>
+			<th>User Ratings</th>
+			<th>Price of the Book</th>
+		</tr>
+
+		{% for books in booksdata %}
+		<tr>
+			<th>{{books.title}}</th>
+			<th>{{books.category}}</th>
+			<th>{{books.publisher}}</th>
+			<th>{{books.language}}</th>
+			<th>{{books.year}}</th>
+			<th>{{books.rating_user}}</th>
+			<th>{{books.price}}</th>
+
+		</tr>
+		{% endfor %}
+
+	</table>
+	<br>
+
+
+{% endblock %}

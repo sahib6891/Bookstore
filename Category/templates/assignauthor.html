@@ -1,0 +1,31 @@
+{% extends 'index.html'%}
+{% block title %}Assign Authors{% endblock %}
+{% block body %}
+
+    <style>
+    </style>
+
+            <H1> Assign Authors to Books:</H1>
+
+    <form  method="post">
+        {% csrf_token %}
+        <select name="bookid">
+        {% for books in booksdata %}
+            <!--<option value="{{bookd.id}}">{{books}} </option>-->
+            <option value="{{books.id}}">{{books.title}} </option>
+        {% endfor %}
+        </select>
+
+        <select name="authorid">
+        {% for authors in authordata %}
+
+            <!--&lt;!&ndash;<option value="{{bookd.id}}">{{books.id}} </option>&ndash;&gt;-->
+
+            <option value="{{authors.id}}">{{authors}} </option>
+
+        {% endfor %}
+        </select>
+
+        <input class="myButton" type="submit" value="submit"></input>
+    </form>
+{%endblock%}
