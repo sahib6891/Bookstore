@@ -2,7 +2,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>{% block title %}Bookstore{% endblock %}</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -19,12 +19,12 @@
         float:right;
         margin-right:100px;}
 
-        .mainpage{
-        <!--background-color: lightblue;-->
+        .mainpage
+        {
         border:3px solid black;
         height:100px;
         width:1500px;
-         }
+        }
         body{ background-color: silver;}
 
         .myButton {
@@ -78,7 +78,7 @@
                         <a class="myButton" href=" {% url 'allbooks'%}" role="button">Books</a>
                     </li>
 
-                     <li>
+                    <li>
                         <a class="myButton" href=" {% url 'allauthors'%}" role="button">Authors</a>
                     </li>
 

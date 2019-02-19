@@ -20,14 +20,3 @@ class AuthorForm(ModelForm):
         fields = ['author_fname', 'author_lname', 'rating_user']
 form = AuthorForm()
 
-# class UserForm(forms.ModelForm):
-#     password = forms.CharField(widget=forms.PasswordInput)
-#
-#     class Meta:
-#         model = User
-#         fields = ['username','password']
-
-# class UserForm(forms.Form):
-#     username = forms.CharField(max_length=50)
-#     password = forms.CharField(widget=forms.PasswordInput)
-

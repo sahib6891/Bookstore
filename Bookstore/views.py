@@ -25,7 +25,7 @@ def homepage(request):
 
 
 def contactus(request):
-	return HttpResponse (" <h1> You can reach us at 999-999-9999   </h1> ")
+	return HttpResponse (" <h1> You can reach us at 999-999-9999 </h1> ")
 
 @login_required(login_url="homepage")
 def books(request):

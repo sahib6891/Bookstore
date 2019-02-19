@@ -67,7 +67,7 @@ def add_books(request):
             price = form.cleaned_data['price']
 
             b = Books(title=title, category=category, publisher=publisher, language=language, year=year,
-                      rating_user=rating_user, price=price)
+                    rating_user=rating_user, price=price)
             b.save()
             return redirect('allbooks')
         # print(title,category,publisher,language,year,rating_user,price)
